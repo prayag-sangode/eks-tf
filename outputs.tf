@@ -93,3 +93,17 @@ output "kubeconfig_command" {
   description = "Run this to configure kubectl"
   value       = "aws eks --region us-east-1 update-kubeconfig --name ${aws_eks_cluster.eks.name}"
 }
+
+# -------------------------------
+# JENKINS
+# -------------------------------
+output "jenkins_ssh" {
+  description = "SSH command"
+  value       = "ssh ubuntu@${aws_instance.jenkins.public_ip}"
+}
+
+output "jenkins_url" {
+  description = "Jenkins UI"
+  value       = "http://${aws_instance.jenkins.public_ip}:8080"
+}
+
