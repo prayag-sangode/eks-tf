@@ -98,9 +98,9 @@ resource "aws_instance" "jenkins" {
               # -------------------------------
               # Install kubectl
               # -------------------------------
-              curl -o kubectl https://amazon-eks.s3.us-east-1.amazonaws.com/latest/2023-11-14/bin/linux/amd64/kubectl
+              curl -LO "https://dl.k8s.io/release/$(curl -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
               chmod +x kubectl
-              mv kubectl /usr/local/bin/
+              sudo mv kubectl /usr/local/bin/
 
               # -------------------------------
               # Permissions fix
