@@ -1,9 +1,9 @@
 name: Terraform Actions
 
 on:
-  #push:
-    #branches:
-      #- main
+  push:
+    branches:
+      - main
 
   pull_request:
 
@@ -45,7 +45,7 @@ jobs:
         run: terraform plan
 
 
-  # 🔹 MANUAL JOB (button-based)
+  # MANUAL JOB 
   terraform-action:
     if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
