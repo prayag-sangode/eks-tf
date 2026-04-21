@@ -1,4 +1,4 @@
-## 1. Manual Bucket Creation (AWS CLI)
+## Manual Bucket Creation (AWS CLI)
 
 To create the bucket immediately via the command line as you requested, run the following command in your terminal:
 
